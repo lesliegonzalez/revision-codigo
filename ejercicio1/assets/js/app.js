@@ -3,8 +3,8 @@ console.log("Hola");
 
 const baseEndpoint = 'https://api.github.com';
 const usersEndpoint = `${baseEndpoint}/users`;
-const $n = document.querySelector('name');
-const $b = document.querySelector('#blog');
+const $n = document.querySelector('.name');//Se agregó . porque es una clase
+const $b = document.querySelector('.blog');//Se cambió el # por . ya que es una clase en 
 const $l = document.querySelector('.location');
 
 //Se gregó async a la función
