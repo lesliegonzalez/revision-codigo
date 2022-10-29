@@ -1,4 +1,4 @@
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector("form") //Se eliminó el # ya que no es un ID, sino una etiqueta
 
 formulario.onsubmit = function(e) {
 
@@ -24,9 +24,7 @@ formulario.onsubmit = function(e) {
   }
 
   /* Se identó esta sección */
-  if (nombre.length > 0 
-    && (edad > 18 
-      && edad < 120) ) {
+  if (nombre.length > 0 && (edad > 18 && edad < 120) ) {
     agregarInvitado(nombre, edad, nacionalidad)
     }
 }
