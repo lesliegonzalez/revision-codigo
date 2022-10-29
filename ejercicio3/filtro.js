@@ -13,7 +13,6 @@ const $i = document.querySelector('input'); //Se eliminó . de input, ya que no 
 
 /* Iteración de la lista de productos */
 for (let i = 0; i < productos.length; i++) {
-  /* crear un div por cada producto */
   var d = document.createElement("div")
   d.classList.add("producto")
 
@@ -26,7 +25,7 @@ for (let i = 0; i < productos.length; i++) {
 
   d.appendChild(ti)
   d.appendChild(imagen)
-
+  
   li.appendChild(d)
 }
 
