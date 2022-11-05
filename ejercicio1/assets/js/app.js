@@ -10,11 +10,12 @@ const $l = document.querySelector('.location');
 //Se gregó async a la función
 async function displayUser(username) {
   $n.textContent = 'cargando...';
-  const response = await fetch(`${usersEndpoint}/${username}`);
-  //console.log(data);
-  $n.textContent = '${data.name}';
-  $b.textContent = '${data.blog}';
-  $l.textContent = '${data.location}';
+  const response = await fetch(`${usersEndpoint}/${username}`)
+    .then( (response) => response.json()); //Se agregó esta instrucción
+  console.log(response); //Se cambió data a response
+  $n.textContent = `${response.name}`; //se modificó data por response.
+  $b.textContent = `${response.blog}`; //se modificó data por response.
+  $l.textContent = `${response.location}`; //se modificó data por response.
 }
 
 function handleError(err) {
